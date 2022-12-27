@@ -6,6 +6,8 @@ COPY conf /bahmni-mart/conf
 
 RUN chmod +x /bahmni-mart/setup.sh
 
+RUN apt-get update && apt-get upgrade
+
 RUN apt-get install -y cron
 
 CMD ["sh", "./bahmni-mart/setup.sh"]
